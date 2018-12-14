@@ -29,9 +29,9 @@
     _mappingFilterBlock = block;
 }
 
-- (NSString *)URLMappingFilter:(NSString *)mappingName {
+- (NSString *)URLMappingFilter:(NSString *)scheme {
     if (_mappingFilterBlock) {
-        return _mappingFilterBlock(mappingName);
+        return _mappingFilterBlock(scheme);
     } else {
         return nil;
     }

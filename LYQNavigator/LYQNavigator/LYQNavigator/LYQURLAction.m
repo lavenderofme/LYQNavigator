@@ -70,16 +70,16 @@ typedef NS_ENUM(NSInteger,LYQUrlJumpType) {
 }
 
 - (NSURL *)nativeJumpWithUrl:(NSString *)urlString {
-    NSString *protocol = [LYQNavigatorConfig instance].protocol;
-    protocol = protocol.length > 0 ? protocol : @"lyq";
-    NSString* url = [NSString stringWithFormat:@"%@://%@",protocol,urlString];
+    NSString *scheme = [LYQNavigatorConfig instance].scheme;
+    scheme = scheme.length > 0 ? scheme : @"lyq";
+    NSString* url = [NSString stringWithFormat:@"%@://%@",scheme,urlString];
     return [NSURL URLWithString:url];
 }
 
 - (NSURL *)webJumpWithUrl:(NSString *)urlString {
-    NSString *protocol = [LYQNavigatorConfig instance].protocol;
-    protocol = protocol.length > 0 ? protocol : @"lyq";
-    NSString* url = [NSString stringWithFormat:@"%@://web?url=%@",protocol,urlString];
+    NSString *scheme = [LYQNavigatorConfig instance].scheme;
+    scheme = scheme.length > 0 ? scheme : @"lyq";
+    NSString* url = [NSString stringWithFormat:@"%@://web?url=%@",scheme,urlString];
     return [NSURL URLWithString:url];
 }
 

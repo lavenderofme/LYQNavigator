@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  设置URL的协议
  */
-@property (nonatomic, copy) NSString *protocol;
+@property (nonatomic, copy) NSString *scheme;
 
 + (instancetype)instance;
 
@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  获取mappingName对应路由控制器的名称
  */
-- (NSString *)URLMappingFilter:(NSString *)mappingName;
+- (NSString *)URLMappingFilter:(NSString *)scheme;
 
 @end
 
